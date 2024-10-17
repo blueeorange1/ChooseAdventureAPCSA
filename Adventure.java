@@ -9,8 +9,6 @@ public class Adventure {
         boolean q1b = false;
         boolean answered = false;
         boolean q2aRoute1 = false;
-        boolean q2bRoute1 = false;
-        boolean q2aRoute2 = false;
         boolean q2bRoute2 = false;
         boolean win = true;
         boolean restart = false;
@@ -140,5 +138,6 @@ public class Adventure {
             }
         }
 
+        choiceInput.close();
     }
 }
