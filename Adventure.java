@@ -4,6 +4,7 @@ public class Adventure {
     public static void main(String[] args) {
         Scanner choiceInput = new Scanner(System.in);
         // Questions
+        boolean begining = false;
         boolean gameStart = true;
         boolean q1a = false;
         boolean q1b = false;
@@ -11,7 +12,7 @@ public class Adventure {
         boolean q2aRoute1 = false;
         boolean q2bRoute2 = false;
         boolean win = false;
-        boolean restart = false;
+        // boolean restart = false;
 
         // Question 1
         while (gameStart) {
@@ -43,7 +44,7 @@ public class Adventure {
                     } else if (question2answer.equalsIgnoreCase("b")) {
                         System.out.println("The bomb was not at A-site and you ran out of time! \n YOU LOSE");
                         answered = true;
-                        restart = true;
+                        // restart = true;
                         gameStart = false;
                     } else {
                         System.out.println("please enter valid answer");
@@ -62,13 +63,13 @@ public class Adventure {
                         System.out.println(
                                 "You put go to cut the red wire and snip it. There is a spark and the bomb instantly detonates. YOU LOSE");
                         answered = true;
-                        restart = true;
+                        // restart = true;
                         gameStart = false;
                     } else if (question3aRoute1_1.equalsIgnoreCase("b")) {
                         System.out.println(
-                                "You decide to go for the green wire. As you snip it the bomb does not detonate. But, it doesn't matter as its to late. The bomb detonates. YOU LOSE");
+                                "You decide to go for the green wire. As you move your hand to the wire and almost cut it. But, it doesn't matter as its to late. The bomb detonates. YOU LOSE");
                         answered = true;
-                        restart = true;
+                        // restart = true;
                         gameStart = false;
                     } else {
                         System.out.println("please enter valid answer");
@@ -87,7 +88,7 @@ public class Adventure {
                         System.out.println(
                                 "You hide as the terrorist holds his post. After a little bit he leaves. As you walk over to defuse the bomb. You realize its too late as the bomb explodes. \n YOU LOSE");
                         answered = true;
-                        restart = true;
+                        // restart = true;
                         gameStart = false;
                     } else if (q1Route2Answer.equalsIgnoreCase("b")) {
                         q2bRoute2 = true;
@@ -109,15 +110,15 @@ public class Adventure {
                     String question3aRoute2_2 = choiceInput.nextLine();
                     if (question3aRoute2_2.equalsIgnoreCase("a")) {
                         System.out.println(
-                                "You put go to cut the red wire and snip it. There is a spark and the bomb instantly detonates. YOU LOSE");
+                                "You put go to green the green wire and snip it. You cut the wire and wait in suspense. The beeping stops and the bomb has been defused.");
                         answered = true;
-                        restart = true;
+                        // restart = true;
                         gameStart = false;
+                        win = true;
                     } else if (question3aRoute2_2.equalsIgnoreCase("b")) {
                         System.out.println(
-                                "You decide to go for the green wire. You cut the wire and wait in suspense. The beeping stops and the bomb has been defused.");
+                                "You decide to go for the green wire. There is a spark and the bomb instantly detonates. YOU LOSE");
                         answered = true;
-                        win = true;
                     } else {
                         System.out.println("please enter valid answer");
                         answered = false;
@@ -127,16 +128,16 @@ public class Adventure {
 
             if (win) {
                 System.out.println("The bomb has been defused. Counter-terrorists win!");
-                restart = true;
+                // restart = true;
             }
 
-            if (restart) {
-                System.out.println("Would you like to play again? \n Enter yes or no");
-                String restartScanner = choiceInput.nextLine();
-                if (restartScanner.equalsIgnoreCase("yes")) {
-                    gameStart = true;
-                }
-            }
+            // if (restart) {
+            // System.out.println("Would you like to play again? \n Enter yes or no");
+            // String restartScanner = choiceInput.nextLine();
+            // if (restartScanner.equalsIgnoreCase("yes")) {
+            // begining = true;
+            // }
+            // }
         }
 
         choiceInput.close();
