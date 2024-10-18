@@ -10,7 +10,7 @@ public class Adventure {
         boolean answered = false;
         boolean q2aRoute1 = false;
         boolean q2bRoute2 = false;
-        boolean win = true;
+        boolean win = false;
         boolean restart = false;
 
         // Question 1
@@ -81,7 +81,7 @@ public class Adventure {
                 answered = false;
                 while (!answered) {
                     System.out.println(
-                            "You arrive to bomb site B. Although there is someone standing there guarding the bomb. \n Option a: Fight the terrorist. Option b: Hide.");
+                            "You arrive to bomb site B. Although there is someone standing there guarding the bomb. \n Option a: Hide. Option b: Fight the terrorist.");
                     String q1Route2Answer = choiceInput.nextLine();
                     if (q1Route2Answer.equalsIgnoreCase("a")) {
                         System.out.println(
