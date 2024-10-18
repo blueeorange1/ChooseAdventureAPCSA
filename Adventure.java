@@ -103,8 +103,9 @@ public class Adventure {
             if (q2bRoute2) {
                 answered = false;
                 while (!answered) {
+                    System.out.println("You jump up behind the terrorist and hit him on the head knocking him out.");
                     System.out.println(
-                            " You see the bomb laying on the ground. You pull out your defuse kit and begin. Option a: Cut red wire. Option b: Cut green wire.");
+                            "You walk over to the bomb laying on the ground. You pull out your defuse kit and begin. Option a: Cut red wire. Option b: Cut green wire.");
                     String question3aRoute2_2 = choiceInput.nextLine();
                     if (question3aRoute2_2.equalsIgnoreCase("a")) {
                         System.out.println(
